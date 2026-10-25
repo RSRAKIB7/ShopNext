@@ -26,3 +26,9 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::view('/notifications', 'user.customer-page', ['page' => 'notifications'])->name('notifications');
 });
 
+Route::prefix('seller')->name('seller.')->group(function () {
+    Route::view('/login', 'user.login')->name('login');
+    Route::view('/register', 'seller.register')->name('register');
+    Route::view('/dashboard', 'seller.dashboard')->name('dashboard');
+    Route::view('/store', 'seller.store')->name('store');
+});
