@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 1200px;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.daraz-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.daraz-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.daraz-btn {
+  transition: all 0.15s ease-in-out;
+}
+
+.daraz-btn:hover {
+  filter: brightness(0.92);
+}
+
+.price-tag {
+  font-variant-numeric: tabular-nums;
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+::selection {
+  background: #fed7aa;
+  color: #7c2d12;
+}
+
+[data-demo-notice] {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 100;
+  max-width: 360px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.24);
+  font-size: 14px;
+}
