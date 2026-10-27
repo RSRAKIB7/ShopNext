@@ -32,3 +32,8 @@ Route::prefix('seller')->name('seller.')->group(function () {
     Route::view('/dashboard', 'seller.dashboard')->name('dashboard');
     Route::view('/store', 'seller.store')->name('store');
 });
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::view('/login', 'user.login')->name('login');
+    Route::view('/dashboard', 'admin.dashboard')->name('dashboard');
+});
